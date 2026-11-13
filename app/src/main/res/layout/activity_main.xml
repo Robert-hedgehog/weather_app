@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="weather"
+            type="com.example.weather_app.WeatherResponse" />
+
+        <variable
+            name="isFahrenheit"
+            type="Boolean" />
+
+        <variable
+            name="showWind"
+            type="Boolean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/select_city"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/citySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:entries="@array/cities_array" />
+
+        <RadioGroup
+            android:id="@+id/scaleRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioCelsius"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/unit_celsius" />
+
+            <RadioButton
+                android:id="@+id/radioFahrenheit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="@string/unit_fahrenheit" />
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/windCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/show_wind_direction" />
+
+        <Button
+            android:id="@+id/searchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/refresh_weather" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@{weather != null ? weather.name : ``}"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/weatherIcon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="12dp"
+            android:background="#CFD8DC"
+            android:contentDescription="Иконка погоды"
+            android:padding="8dp"
+            android:visibility="@{weather != null ? View.VISIBLE : View.GONE}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{weather != null ? weather.getFormattedTemp(isFahrenheit) : `--`}"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@{weather != null ? weather.getCloudsText() : ``}"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/windContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="@{showWind &amp;&amp; weather != null ? View.VISIBLE : View.GONE}">
+
+            <ImageView
+                android:id="@+id/windArrow"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:contentDescription="Направление ветра"
+                android:rotation="@{weather != null ? weather.getWindRotation() : 0f}"
+                android:src="@drawable/arrow" />
+
+            <TextView
+                android:id="@+id/windText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="@{weather != null ? weather.getWindDirectionText() : ``}"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

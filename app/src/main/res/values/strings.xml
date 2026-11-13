@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name">weather_app</string>
+    <string name="temp_format">%.1f°C</string>
+    <string name="humidity_format">Влажность: %d%%</string>
+
+    <string name="select_city">Выберите город:</string>
+    <string name="unit_celsius">°C</string>
+    <string name="unit_fahrenheit">°F</string>
+    <string name="show_wind_direction">Показывать направление ветра</string>
+    <string name="refresh_weather">Обновить</string>
+
+    <string-array name="cities_array">
+        <item>Ангарск</item>
+        <item>Архангельск</item>
+        <item>Астрахань</item>
+        <item>Балашиха</item>
+        <item>Барнаул</item>
+        <item>Белгород</item>
+        <item>Благовещенск</item>
+        <item>Братск</item>
+        <item>Брянск</item>
+        <item>Великий Новгород</item>
+        <item>Владивосток</item>
+        <item>Владикавказ</item>
+        <item>Владимир</item>
+        <item>Волгоград</item>
+        <item>Волжский</item>
+        <item>Вологда</item>
+        <item>Воронеж</item>
+        <item>Грозный</item>
+        <item>Дзержинск</item>
+        <item>Екатеринбург</item>
+        <item>Иваново</item>
+        <item>Ижевск</item>
+        <item>Иркутск</item>
+        <item>Йошкар-Ола</item>
+        <item>Казань</item>
+        <item>Калининград</item>
+        <item>Калуга</item>
+        <item>Кемерово</item>
+        <item>Киров</item>
+        <item>Комсомольск-на-Амуре</item>
+        <item>Королёв</item>
+        <item>Кострома</item>
+        <item>Краснодар</item>
+        <item>Красноярск</item>
+        <item>Курган</item>
+        <item>Курск</item>
+        <item>Липецк</item>
+        <item>Люберцы</item>
+        <item>Магнитогорск</item>
+        <item>Махачкала</item>
+        <item>Москва</item>
+        <item>Мурманск</item>
+        <item>Мытищи</item>
+        <item>Набережные Челны</item>
+        <item>Нальчик</item>
+        <item>Нижневартовск</item>
+        <item>Нижнекамск</item>
+        <item>Нижний Новгород</item>
+        <item>Нижний Тагил</item>
+        <item>Новокузнецк</item>
+        <item>Новороссийск</item>
+        <item>Новосибирск</item>
+        <item>Омск</item>
+        <item>Орёл</item>
+        <item>Оренбург</item>
+        <item>Пенза</item>
+        <item>Пермь</item>
+        <item>Петрозаводск</item>
+        <item>Подольск</item>
+        <item>Ростов-на-Дону</item>
+        <item>Рязань</item>
+        <item>Самара</item>
+        <item>Санкт-Петербург</item>
+        <item>Саранск</item>
+        <item>Саратов</item>
+        <item>Севастополь</item>
+        <item>Симферополь</item>
+        <item>Смоленск</item>
+        <item>Сочи</item>
+        <item>Ставрополь</item>
+        <item>Старый Оскол</item>
+        <item>Стерлитамак</item>
+        <item>Сургут</item>
+        <item>Сыктывкар</item>
+        <item>Таганрог</item>
+        <item>Тамбов</item>
+        <item>Тверь</item>
+        <item>Тольятти</item>
+        <item>Томск</item>
+        <item>Тула</item>
+        <item>Тюмень</item>
+        <item>Улан-Удэ</item>
+        <item>Ульяновск</item>
+        <item>Уфа</item>
+        <item>Хабаровск</item>
+        <item>Химки</item>
+        <item>Чебоксары</item>
+        <item>Челябинск</item>
+        <item>Череповец</item>
+        <item>Чита</item>
+        <item>Шахты</item>
+        <item>Энгельс</item>
+        <item>Якутск</item>
+        <item>Ярославль</item>
+    </string-array>
+</resources>
